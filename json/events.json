@@ -1,33 +1,39 @@
 {
-    "events": [
+    "reoccuring-events": [
         {
-            "event-date": "Aug 28 2023 18 30",
-            "event-name": "Flesh & Blood Armory"
+            "event-day-of-week": 1,
+            "event-name": "Flesh & Blood Armory",
+            "event-time": "18 30"
         },
         {
-            "event-day": "Tuesday",
-            "event-name": "Pioneer Weekly",
-            "event-time": "6:30PM EST"
+            "event-day-of-week": 2,
+            "event-name": "Pioneer Tuesdays",
+            "event-time": "18 30"
         },
         {
-            "event-day": "Friday",
+            "event-day-of-week": 5,
             "event-name": "Modern FNM",
-            "event-time": "6:30PM EST"
+            "event-time": "18 30"
         },
         {
-            "event-day": "Saturday",
+            "event-day-of-week": 6,
             "event-name": "Commander",
-            "event-time": "12:00PM EST"
+            "event-time": "12 00"
         },
         {
-            "event-day": "Saturday",
+            "event-day-of-week": 6,
             "event-name": "Lorcana League",
-            "event-time": "4:00PM EST"
+            "event-time": "16 00"
         },
         {
-            "event-day": "Sunday",
+            "event-day-of-week": 0,
             "event-name": "Warhammer",
-            "event-time": "11:00AM EST"
+            "event-time": "11 00"
         }
-        ]
+    ],
+    "special-events": [
+        {
+
+        }
+    ]
 }
