@@ -4,7 +4,3 @@ const mydata = require("./json/events.json");
 
 
 console.log(mydata.events);
-
-for (const schedule in mydata.events) {
-    console.log(schedule);
-}
