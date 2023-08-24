@@ -3,13 +3,13 @@ const webhookUrl =
 const myData = require("./json/events.json");
 let todaysDate = new Date().setHours(0, 0, 0, 0);
 let daysOfWeek = [];
-let weeklyEvents = {};
+let weeklyEvents = [];
 
 function putEventInDictionary(event, weekday, hours, minutes) {
-  weeklyEvents[event] = {
-    eventName: `${event}`,
-    eventDate: `${new Date(daysOfWeek[weekday]).setHours(hours, minutes, 0, 0)/1000}`
-  };
+  weeklyEvents.push([
+    `${event}`,
+    `${new Date(daysOfWeek[weekday]).setHours(hours, minutes, 0, 0)/1000}`
+  ]);
 }
 
 // Put days of the week into an array to be referenced later
@@ -57,17 +57,34 @@ for (let i = 0; i < myData["special-events"].length; i++) {
   
   currentTime = myData["special-events"][i]["event-date"].split(" ");
   currentTime = new Date(currentTime[0], currentTime[1], currentTime[2], currentTime[3], currentTime[4]);
-  console.log(currentTime.getTime());
   if (currentTime.getTime() >= daysOfWeek[0] && currentTime.getTime() <= daysOfWeek[7]) {
-    weeklyEvents[myData["special-events"][i]["event-name"]] = {
-      eventName: `${myData["special-events"][i]["event-name"]}`,
-      eventDate: `${currentTime.getTime()/1000}`
-    }
+    weeklyEvents.push([
+      `${myData["special-events"][i]["event-name"]}`,
+      `${currentTime.getTime()/1000}`
+    ]);
   }
   else {
     continue;
   }
 }
 
-console.log(weeklyEvents);
-console.log(daysOfWeek);
+let weeklyEventsArrSorted = weeklyEvents.sort((a,b)=>(a[1]-b[1]));
+
+const { EmbedBuilder, WebhookClient } = require('discord.js');
+
+const webhookClient = new WebhookClient({url: webhookUrl });
+
+const embed = new EmbedBuilder()
+	.setTitle('Apex Gaming Events')
+	.setColor(0x00FFFF);
+
+for (let i = 0; i < weeklyEventsArrSorted.length; i++) {
+  embed.addFields(
+    {name: weeklyEventsArrSorted[i][0], value: `<t:${weeklyEvents[i][1]}:f>`, inline: true}
+  );
+}
+
+webhookClient.send({
+	username: 'Apex Gaming',
+	embeds: [embed],
+});
