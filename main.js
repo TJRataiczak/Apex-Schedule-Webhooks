@@ -8,7 +8,7 @@ let weeklyEvents = {};
 function putEventInDictionary(event, weekday, hours, minutes) {
   weeklyEvents[event] = {
     eventName: `${event}`,
-    eventDate: `${new Date(daysOfWeek[weekday]).setHours(hours, minutes, 0, 0)}`
+    eventDate: `${new Date(daysOfWeek[weekday]).setHours(hours, minutes, 0, 0)/1000}`
   };
 }
 
@@ -53,6 +53,21 @@ for (let i = 0; i < myData["reoccuring-events"].length; i++) {
   }
 }
 
+for (let i = 0; i < myData["special-events"].length; i++) {
+  
+  currentTime = myData["special-events"][i]["event-date"].split(" ");
+  currentTime = new Date(currentTime[0], currentTime[1], currentTime[2], currentTime[3], currentTime[4]);
+  console.log(currentTime.getTime());
+  if (currentTime.getTime() >= daysOfWeek[0] && currentTime.getTime() <= daysOfWeek[7]) {
+    weeklyEvents[myData["special-events"][i]["event-name"]] = {
+      eventName: `${myData["special-events"][i]["event-name"]}`,
+      eventDate: `${currentTime.getTime()/1000}`
+    }
+  }
+  else {
+    continue;
+  }
+}
 
 console.log(weeklyEvents);
 console.log(daysOfWeek);

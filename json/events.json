@@ -33,7 +33,16 @@
     ],
     "special-events": [
         {
-
+            "event-date": "2023 8 2 12 0",
+            "event-name": "The Wilds of Eldraine Prelease"
+        },
+        {
+            "event-date": "2023 8 16 12 0",
+            "event-name": "The Wilds of Eldraine Commander Party"
+        },
+        {
+            "event-date": "2023 8 30 12 0",
+            "event-name": "The Wilds of Eldraine Store Championship"
         }
     ]
 }
