@@ -1,5 +1,5 @@
 const webhookUrl =
-  "https://discord.com/api/webhooks/1143361330791858206/Z8jxGJHDP8ohI8_LJCCOuwuq5NvFjOhPZzSg8vyMhBKN71NVe_qcqyBCqZ5ZYoRXZRPl";
+  "https://discord.com/api/webhooks/1107375967304949811/V__CrfPYW52GborQ2DKE4gpb2muRpr3WzQ8Iz7TIUOC0LJlL_Z8fc6whLqNnJa1P9O7S";
 const myData = require("./json/events.json");
 let todaysDate = new Date().setHours(0, 0, 0, 0);
 let daysOfWeek = [];
