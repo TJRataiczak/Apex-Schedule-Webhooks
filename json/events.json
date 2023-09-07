@@ -1,11 +1,6 @@
 {
     "reoccuring-events": [
         {
-            "event-day-of-week": 1,
-            "event-name": "Flesh & Blood Armory",
-            "event-time": "18 30"
-        },
-        {
             "event-day-of-week": 2,
             "event-name": "Pioneer Tuesdays",
             "event-time": "18 30"
@@ -14,27 +9,48 @@
             "event-day-of-week": 5,
             "event-name": "Modern FNM",
             "event-time": "18 30"
-        },
-        {
-            "event-day-of-week": 6,
-            "event-name": "Commander",
-            "event-time": "12 00"
-        },
-        {
-            "event-day-of-week": 6,
-            "event-name": "Lorcana League",
-            "event-time": "16 00"
-        },
-        {
-            "event-day-of-week": 0,
-            "event-name": "Warhammer",
-            "event-time": "11 00"
         }
     ],
     "special-events": [
         {
-            "event-date": "2023 8 2 12 0",
-            "event-name": "The Wilds of Eldraine Prelease"
+            "event-date": "2023 8 9 11 0",
+            "event-name": "Modern 5k AIQ"
+        },
+        {
+            "event-date": "2023 8 9 11 0",
+            "event-name": "Command Zone"
+        },
+        {
+            "event-date": "2023 8 9 13 0",
+            "event-name": "Pauper Challenge"
+        },
+        {
+            "event-date": "2023 8 9 14 0",
+            "event-name": "Mystery Convention Edition Draft"
+        },
+        {
+            "event-date": "2023 8 9 17 0",
+            "event-name": "Chaos Collector Booster Sealed"
+        },
+        {
+            "event-date": "2023 8 10 11 0",
+            "event-name": "Pioneer 2k AIQ"
+        },
+        {
+            "event-date": "2023 8 10 11 0",
+            "event-name": "Command Zone"
+        },
+        {
+            "event-date": "2023 8 10 13 0",
+            "event-name": "Legacy Challenge"
+        },
+        {
+            "event-date": "2023 8 10 14 0",
+            "event-name": "Dominaria Remastered 2HG Buy-a-Box"
+        },
+        {
+            "event-date": "2023 8 10 17 0",
+            "event-name": "Mystery Convention Edition Draft"
         },
         {
             "event-date": "2023 8 16 12 0",
